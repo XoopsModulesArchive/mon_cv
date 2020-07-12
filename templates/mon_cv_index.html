@@ -1,0 +1,46 @@
+<table  border="1">
+<tr>
+    <td colspan="3" class="head"><{$VOTRE}></td></tr>
+  <tr>
+    <td colspan="3" class="even"><p><a href="../mon_cv/admin/attente.php"><{$combiena}>  <{$ATTENTE}></a></p>
+<{$combiene}>  <{$ENREGISTERS}></tr>
+<tr >
+    <td><a href="cv.php"><img src="images/1.PNG" ></a></td>
+	<td><a href="modifie.php"><img src="images/2.PNG" ></a></td>
+    <td><a href="recherche.php"><img src="images/3.PNG"></a></td>
+  </tr>
+  <tr > <td><p><{$INSCRIVEZ}></p>
+      <p><a href="cv.php"><{$CREERCV}></a> . </p></td>
+    <td><p><{$MODIFIEZ}></p>
+      <p><a href="modifie.php"><{$MODIFIERCV}></a> . </p></td>
+    <td><p><{$RECHERCHEZ}></p>
+      <p><a href="recherche.php"><{$CONSULTERCV}></a> . </p></td>
+  </tr>
+ <{if $combiene>=1}>
+ <tr><td colspan="3">
+  <table  border="1"><tr>
+<td colspan="5" class="odd"><{$NOUVEAU}></td></tr>
+<tr>
+<td class="even"><{$DOMAINE}></td>
+<td class="even"><{$NIVEAU}></td>
+<td class="even"><{$VILLE}></td>
+<td class="even"><{$PAYS}></td>
+<td class="even"><{$CONSULTE}></td></tr>
+<{section name=i loop=$posts}>
+<{cycle values=odd,even assign=class}>
+<tr class="<{$class}>">
+<td class="<{$class}>"><{$posts[i].formation}></td>
+<td class="<{$class}>"><{$posts[i].niveau}></td>
+<td class="<{$class}>"><{$posts[i].ville}></td>
+<td class="<{$class}>"><{$posts[i].pays}></td>
+<td class="<{$class}>"><a href="consulter.php?id=<{$posts[i].id}>"><{$CONSULTE}></a></td>
+</tr>
+<{/section}>
+</table>
+<{if $PAGENAV}><{$PAGENAV}><{/if}>
+
+  </td></tr><{/if}>
+</table>
+
+
+

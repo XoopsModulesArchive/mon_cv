@@ -1,0 +1,9 @@
+<ul>
+<{foreach item=message from=$block.mymodule}>
+<li>
+<a href ="<{$xoops_url}>/modules/mon_cv/consulter.php?id=<{$message.id}>"><{$message.formation}></a><br>
+<{$message.spec}><br>
+<{$message.ville}>,<{$message.pays}><br><br>
+</li>
+<{/foreach}>
+</ul>

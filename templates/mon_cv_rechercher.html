@@ -1,0 +1,29 @@
+<{$combien}> <{$ENREGISTERS}>
+  <table  border="1"><tr>
+<td colspan="7" class="odd"><{$NOUVEAU}></td></tr>
+<tr>
+<td class="even"><{$TITRE}></td>
+<td class="even"><{$NIVEAU}></td>
+<td class="even"><{$DOMAINE}></td>
+<td class="even"><{$EXPERIENCE}></td>
+<td class="even"><{$VILLE}></td>
+<td class="even"><{$PAYS}></td>
+<td class="even"><{$CONSULTE}></td></tr>
+<{section name=i loop=$posts}>
+<{cycle values=odd,even assign=class}>
+<tr class="<{$class}>">
+<td class="<{$class}>"><{$posts[i].titre}></td>
+<td class="<{$class}>"><{$posts[i].niveau}></td>
+<td class="<{$class}>"><{$posts[i].formation}></td>
+<td class="<{$class}>"><{$posts[i].experience}></td>
+<td class="<{$class}>"><{$posts[i].ville}></td>
+<td class="<{$class}>"><{$posts[i].pays}></td>
+<td class="<{$class}>"><a href="consulter.php?id=<{$posts[i].id}>"><{$CONSULTE}></a></td>
+</tr>
+<{/section}>
+</table>
+<{if $PAGENAV}><{$PAGENAV}><{/if}>
+
+<br>
+
+
